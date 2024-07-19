@@ -1,54 +1,53 @@
-// Task 1: Create an array of numbers from 1 to 5 and log the array to the console.
-const numbers = [1, 2, 3, 4, 5];
-console.log(numbers);
+// Task 1: Create an object representing a book with properties like title, author, and year, and log the object to the console.
+const book = {
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    year: 1925
+};
+console.log(book);
+ 
+// Task 2: Access and log the title and author properties of the book object.
+console.log("Title:", book.title);
+console.log("Author:", book.author);
 
-// Task 2: Access the first and last elements of the array and log them to the console.
-console.log("First Element:", numbers[0]);
-console.log("Last Element:", numbers[numbers.length - 1]);
+// Task 3: Add a method to the book object that returns a string with the book's title and author, and log the result of calling this method.
+book.getDetails = function() {
+    return `${this.title} by ${this.author}`;
+};
+console.log(book.getDetails());
 
-// Task 3: Use the push method to add a new number to the end of the array and log the updated array.
-numbers.push(6);
-console.log("Updated Array after Push:", numbers);
+// Task 4: Add a method to the book object that takes a parameter (year) and updates the book's year property, then log the updated object.
+book.updateYear = function(newYear) {
+    this.year = newYear;
+};
+book.updateYear(2020);
+console.log(book);
 
-// Task 4: Use the pop method to remove the last element from the array and log the updated array.
-numbers.pop();
-console.log("Updated Array after Pop:", numbers);
+// Task 5: Create a nested object representing a library with properties like name and books (an array of book objects), and log the library object to the console.
+const library = {
+    name: "Central Library",
+    books: [
+        {title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960},
+        {title: "1984", author: "George Orwell", year: 1949}
+    ]
+};
+console.log(library);
 
-// Task 5: Use the shift method to remove the first element from the array and log the updated array.
-numbers.shift();
-console.log("Updated Array after Shift:", numbers);
+// Task 6: Access and log the name of the library and the titles of all the books in the library.
+console.log("Library Name:", library.name);
+library.books.forEach(book => console.log("Book Title:", book.title));
 
-// Task 6: Use the unshift method to add a new number to the beginning of the array and log the updated array.
-numbers.unshift(0);
-console.log("Updated Array after Unshift:", numbers);
+// Task 7: Add a method to the book object that uses the this keyword to return a string with the book's title and year, and log the result of calling this method.
+book.getTitleAndYear = function() {
+    return `Title: ${this.title}, Year: ${this.year}`;
+};
+console.log(book.getTitleAndYear());
 
-// Task 7: Use the map method to create a new array where each number is doubled and log the new array.
-const doubledNumbers = numbers.map(num => num * 2);
-console.log("Doubled Numbers:", doubledNumbers);
-
-// Task 8: Use the filter method to create a new array with only even numbers and log the new array.
-const evenNumbers = numbers.filter(num => num % 2 === 0);
-console.log("Even Numbers:", evenNumbers);
-
-// Task 9: Use the reduce method to calculate the sum of all numbers in the array and log the result.
-const sum = numbers.reduce((acc, curr) => acc + curr, 0);
-console.log("Sum of All Numbers:", sum);
-
-// Task 10: Use a for loop to iterate over the array and log each element to the console.
-for (let i = 0; i < numbers.length; i++) {
-    console.log(numbers[i]);
+// Task 8: Use a for... in loop to iterate over the properties of the book object and log each property and its value.
+for (let prop in book) {
+    console.log(`${prop}: ${book[prop]}`);
 }
 
-// Task 11: Use the forEach method to iterate over the array and log each element to the console.
-numbers.forEach(num => console.log(num));
-
-// Task 12: Create a two-dimensional array (matrix) and log the entire array to the console.
-const matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-];
-console.log(matrix);
-
-// Task 13: Access and log a specific element from the two-dimensional array.
-console.log("Specific Element:", matrix[1][2]);
+// Task 9: Use Object.keys and Object.values methods to log all the keys and values of the book object.
+console.log(Object.keys(book));
+console.log(Object.values(book));
