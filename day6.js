@@ -1,68 +1,54 @@
-// • Task 1: Write a function to check if a number is even or odd and log the result to the console.
-function checkEvenOrOdd(num) {
-    if (num % 2 === 0) {
-      console.log(`${num} is even.`);
-    } else {
-      console.log(`${num} is odd.`);
-    }
-  }
+// Task 1: Create an array of numbers from 1 to 5 and log the array to the console.
+const numbers = [1, 2, 3, 4, 5];
+console.log(numbers);
 
-//   • Task 2: Write a function to calculate the square of a number and return the result.
-function calculateSquare(num) {
-    return num * num;
-  }
-  console.log(calculateSquare(5)); 
+// Task 2: Access the first and last elements of the array and log them to the console.
+console.log("First Element:", numbers[0]);
+console.log("Last Element:", numbers[numbers.length - 1]);
 
-//    • Task 3: Write a function expression to find the maximum of two numbers and log the result to the console.
-const maxOfTwo = (a, b) => {
-    const result = Math.max(a, b);
-    console.log(`The maximum is ${result}.`);
-  };
-  maxOfTwo(3, 5);
+// Task 3: Use the push method to add a new number to the end of the array and log the updated array.
+numbers.push(6);
+console.log("Updated Array after Push:", numbers);
 
-//   • Task 4: Write a function expression to concatenate two strings and return the result.
-const concatStrings = (str1, str2) => {
-    return str1 + str2;
-  };
-  console.log(concatStrings('Hello', ' World'));
+// Task 4: Use the pop method to remove the last element from the array and log the updated array.
+numbers.pop();
+console.log("Updated Array after Pop:", numbers);
 
-//   • Task 5: Write an arrow function to calculate the sum of two numbers and return the result.
-const sumNumbers = (a, b) => a + b;
-console.log(sumNumbers(2, 3));
+// Task 5: Use the shift method to remove the first element from the array and log the updated array.
+numbers.shift();
+console.log("Updated Array after Shift:", numbers);
 
-// Task 6: Write an arrow function to check if a string contains a specific character and return a boolean value.
-const containsCharacter = (str, char) => str.includes(char);
-console.log(containsCharacter('hello world', 'o'));
+// Task 6: Use the unshift method to add a new number to the beginning of the array and log the updated array.
+numbers.unshift(0);
+console.log("Updated Array after Unshift:", numbers);
 
-// Task 7: Write a function that takes two parameters and returns their product. Provide a default value for the second parameter.
-function multiply(a, b = 1) {
-    return a * b;
-  }
-  
-  console.log(multiply(4));
-  console.log(multiply(4, 2));
+// Task 7: Use the map method to create a new array where each number is doubled and log the new array.
+const doubledNumbers = numbers.map(num => num * 2);
+console.log("Doubled Numbers:", doubledNumbers);
 
-//   Task 8: Write a function that takes a person's name and age and returns a greeting message. Provide a default value for the age.
-function greet(name, age = 30) {
-    return `Hello, ${name}. You are ${age} years old.`;
-  }
-  console.log(greet('Alice'));
-  console.log(greet('Bob', 22));
+// Task 8: Use the filter method to create a new array with only even numbers and log the new array.
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log("Even Numbers:", evenNumbers);
 
-//   Task 9: Write a higher-order function that takes a function and a number, and calls the function that many times.
-function callNtimes(func, n) {
-    for (let i = 0; i < n; i++) {
-      func();
-    }
-  }
-  callNtimes(() => console.log('Hello'), 3);
+// Task 9: Use the reduce method to calculate the sum of all numbers in the array and log the result.
+const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+console.log("Sum of All Numbers:", sum);
 
-//   Task 10: Write a higher-order function that takes two functions and a value, applies the first function to the value, and then applies the second function to the result.
-function applyFunctionsSequentially(func1, func2, value) {
-    const result = func1(value);
-    return func2(result);
-  }
-  const double = x => x * 2;
-  const increment = x => x + 1;
-  
-  console.log(applyFunctionsSequentially(double, increment, 5));
+// Task 10: Use a for loop to iterate over the array and log each element to the console.
+for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+}
+
+// Task 11: Use the forEach method to iterate over the array and log each element to the console.
+numbers.forEach(num => console.log(num));
+
+// Task 12: Create a two-dimensional array (matrix) and log the entire array to the console.
+const matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+console.log(matrix);
+
+// Task 13: Access and log a specific element from the two-dimensional array.
+console.log("Specific Element:", matrix[1][2]);
