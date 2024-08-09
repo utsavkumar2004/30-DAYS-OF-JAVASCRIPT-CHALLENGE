@@ -1,0 +1,33 @@
+<!-- Task 1: Initialize a new project directory and set up the basic HTML structure for the chat application.
+Task 2: Add a basic CSS file to style the chat application, Including a chat window and input area.
+Task 3: Set up a simple WebSocket server using Node.js and the library. Write a script to create the server and handle connections
+Task 4: Test the WebSocket server by logging messages when clients connect and disconnect.
+Task 5: Add a script to the HTML file to establish a WebSocket connection to the server.
+Task 6: Write functions to handle sending and receiving messages through the WebSocket connection. Log received messages to the console.
+Task 7: Modify the HTML structure to include a chat window and an input area for typing messages. Style the chat window and input area using CSS.
+Task 8: Write a function to display received messages in the chat window. Add event listeners to send messages when the user presses Enter or clicks a send button.
+Task 9: Add user authentication to the chat application. Allow users to enter a username before joining the chat. Display usernames alongside their messages in the chat window.
+Task 10: Add CSS styles to differentiate messeges sent by different users. Add CS5 antimations or transitions to make the chat application more interactive and visually appealing. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="style26.css">
+</head>
+<body>
+    <div id="chat-container">
+        <input type="text" id="username-input" placeholder="Enter your username...">
+        <div id="chat-window"></div>
+        <div id="input-container">
+            <input type="text" id="message-input" placeholder="Type a message...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    
+    <script src="script26.js"></script>
+</body>
+</html>
+
