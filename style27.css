@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#task-container {
+    margin-top: 20px;
+}
+
+.task-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+#task-form input[type="text"],
+#task-form textarea,
+#task-form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+#task-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.task-item {
+    /* Existing styles */
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+/* Additional styling for better readability */
+.task-item h3 {
+    margin: 0;
+}
+
+.task-item p {
+    margin: 5px 0;
+}
