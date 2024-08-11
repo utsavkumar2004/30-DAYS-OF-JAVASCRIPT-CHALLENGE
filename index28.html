@@ -1,0 +1,52 @@
+<!-- Task 1: Initialize a new project directory and set up the basic HTML structure for the e-commerce website.
+Task 2: Add a basic CSS file to style the e-commerce website, Including a product listing grid and a shopping cart section.
+Task 3: Create a JSON file or an array of product objects with details like name, price, description, and image URL
+Task 4: Write a script to dynamically generate the product listing from the product data and display it on the web page. Style the product cards using CSS.
+Task 5: Add an "Add to Cart" button to each product card. Write a function to handle adding products to the shopping cart.
+Task 6: Create a shopping cart section that displays the products added to the cart, including the name, price, and quantity. Update the cart display whenever a product is added.
+Task 7: Add functionality to update the quantity of products in the cart. Write a function to handle increasing and decreasing the quantity of items. 
+Task 8: Add a "Remove" button to each item in the cart. Wite a function to handle removing products from the cart, and updating the display.
+Task 9: Create a checkout form that collects user information (e.g., name, address, payment detalls). Style the form using CSS. 
+Task 10: Write a function to handle form submission, simulating the checkout process. Display a confirmation message with the order details. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your one-stop e-commerce website for all your shopping needs.">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="style28.css">
+</head>
+<body>
+    <header>
+        <h1>E-Commerce Website</h1>
+    </header>
+
+    <main>
+        <div class="product-grid">
+            <!-- Products will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <div id="shopping-cart" class="shopping-cart">
+        <!-- Cart items will be dynamically inserted here -->
+    </div>
+
+    <form id="checkout-form">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address" required><br>
+        <label for="payment">Payment Details:</label><br>
+        <input type="text" id="payment" name="payment" required><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <footer>
+        <p>&copy; 2024 E-Commerce Website</p>
+    </footer>
+    <script src="script28.js"></script>
+</body>
+</html>
