@@ -1,0 +1,65 @@
+<!-- Task 1: initialize a new project directory and set up the basic HTML structure for the final project. 
+Task 2: Add a basic CSS file to style the social media dashboard
+Task 3: Create a login and registration form that collects a usemame, omatl, and password. Style the forms using CSS. 
+Task 4: White scripts to handle registration and login, storing user information in lockStorage of sessionalStorage, Include basic validation for Input fields.
+Task 5: Create a user profile page that displays the logged-in user's information, including their username, ernail, and a profile picture. Allow users to update their profile information.
+Task 6: Write a script to handle updating the user profile information and saving the changes to focalStorage or sessionStorage.
+Task 7: Add a form to the HTML structure with fields for entering post details (e... text, image). Style the form using CSS.
+Task 8: Write a script to handle form submission, creating a new post object and adding it to an array of posts. Display the new post in the feed, including the username of the logged-in user.
+Task 9: Add "Like" and "Coninsent" buttons to each post. Write functions to handle liking a post and adding comments to a post 
+Task 10: Display the number of likes and comments eadh post. Update the display whem users interact with the posts
+Task 11: implement a simple notification system that alerts users when they receive a new like or comment on their posts, diplay notifications in a sidebar.
+Task 12: Write a script to hadle generating and displaying notifications based on user interactions.
+Task 13: Add CSS styles to differentiate posts by differerit users. Display The logged-in user's posts with a distinct style. 
+Task 14: Add CSS animation or transition to make the social media dashboard more interactive and visually appealing.
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <title>Social Media Dashboard</title>
+     <link rel="stylesheet" href="style30.css">
+ </head>
+ <body>
+     <!-- Your content will go here -->
+     <form id="registerForm">
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Register</button>
+    </form>
+    
+    <form id="loginForm">
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <div id="profile">
+        <h2>User Profile</h2>
+        <img src="" alt="Profile Picture" id="profilePic">
+        <p><strong>Username:</strong> <span id="username"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+    </div>
+
+    <form id="updateProfileForm">
+        <input type="file" id="profilePic" accept="image/*">
+        <input type="text" id="newUsername" placeholder="New Username">
+        <input type="email" id="newEmail" placeholder="New Email">
+        <button type="submit">Update Profile</button>
+    </form>
+
+    <form id="postForm">
+        <textarea name="postContent" placeholder="What's on your mind?"></textarea>
+        <input type="file" id="postImage" accept="image/*">
+        <button type="submit">Post</button>
+    </form>
+
+    <aside id="notificationsSidebar">
+        <!-- Notifications will be displayed here -->
+    </aside>
+    
+    <script src="script30.js"></script>
+ </body>
+ </html>
+ 
